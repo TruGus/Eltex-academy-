@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+#define N 5
+
+int a[N];
+
+int main() 
+{
+  
+  int k = 1;
+  for(int i = 0; i <= 4; i++)
+  {
+    a[i] = i;
+    printf("%d", a[i]);
+  }
+
+  printf("\n");
+
+  for(int i = 0; i <= 4; i++)
+  {
+    a[i] = N-k;
+    k++;
+    printf("%d", a[i]);
+  }
+  return 0;
+}

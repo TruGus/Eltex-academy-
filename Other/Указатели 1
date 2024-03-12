@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+  unsigned int a;
+  char *ptr;
+  scanf("%d", &a);
+  ptr = &a;
+  ptr += 2;
+  printf("%d\n", *ptr);
+  return 0;
+}

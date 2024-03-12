@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+#define M 5
+#define N 5
+
+int a[M][N];
+int main() {
+  
+  int b = 1;
+  int i = 0;
+  int j = 0;
+  int kx = 0;
+   
+   
+while(b <= N*N)
+{
+    
+    
+    i = kx;
+     
+    for (j = kx; j <= M - 1 - kx; j++)
+    {
+      a[i][j] = b;
+      b++;
+      
+    }
+   
+    j = M - kx - 1;
+    
+    for(i = 1 + kx; i <= M - kx - 2; i++)
+    {
+      a[i][j] = b;
+      b++;
+    }
+ 
+    i = M - 1 - kx;
+    
+    
+    for(j = M - 1 - kx; j >= kx + 1; j--) 
+    {
+      a[i][j] = b;
+      b++;
+    } 
+     
+    j = 0 + kx;
+   
+    for(i = M - kx - 1; i >= 1 + kx; i--) 
+    {
+      a[i][j] = b;
+      b++;
+    }
+
+    kx++;
+}
+   
+
+   for(int k = 0; k <= 4; k++)
+   {
+    for(int v = 0; v <= 4; v++)
+    {
+      printf("%d ", a[k][v]);
+    }
+    printf("\n");
+   }
+    
+  return 0;
+}
